@@ -1,0 +1,73 @@
+<!-- <div class="container">
+    <h2>Book Turf</h2>
+    <form >
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" class="form-control" [(ngModel)]="booking.bookingDate" required>
+      </div>
+      <div class="form-group">
+        <label for="duration">Duration (in hours)</label>
+        <input type="number" id="duration" name="duration" class="form-control" [(ngModel)]="booking.duration" required>
+      </div>
+      <div class="form-group">
+        <label for="startTime">Start Time</label>
+        <input type="time" id="startTime" name="startTime" class="form-control" [(ngModel)]="booking.startTime" required>
+      </div>
+      <div class="form-group">
+        <label for="endTime">End Time</label>
+        <input type="time" id="endTime" name="endTime" class="form-control" [(ngModel)]="booking.endTime" required>
+      </div>
+      <button type="submit" (click)="book()" class="btn btn-primary">Book</button>
+    </form>
+  </div> -->
+  <!-- <div class="but">
+    <form [formGroup]="dateRangeForm" (ngSubmit)="onSubmit()">
+       <mat-form-field appearance="fill">
+          <mat-label>Booking Date</mat-label>
+          <input matInput [matDatepicker]="picker1" formControlName="bookingDate">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+       </mat-form-field>
+     
+       <mat-form-field appearance="fill">
+          <mat-label>From Time</mat-label>
+             <mat-select formControlName="fromTime">
+                @for( slot of timeSlots; track slot) {
+                   <mat-option [value]="slot">{{slot}}</mat-option>
+                }
+               </mat-select>
+               
+       </mat-form-field>
+     
+     
+       <mat-form-field appearance="fill">
+          <mat-label>To Time</mat-label>
+          <mat-select formControlName="toTime">
+             @for( slot of timeSlots; track slot) {
+                <mat-option [value]="slot">{{slot}}</mat-option>
+             }
+          </mat-select>
+       </mat-form-field>
+       <div class="but">
+       <button mat-raised-button color="primary" type="submit">Submit</button>
+       </div>
+      </form>
+    </div> -->
+    <div class="but">
+ 
+      <div class="row" style="display: flex;">
+         <div class="col" style="display: block;">
+            <label>Choose Date</label>
+            <input type="date" [(ngModel)]="date">
+         </div>
+         <div class="col">
+            <select [(ngModel)]="blogId">
+               <option>Choose slot</option>
+               <option *ngFor="let slot of slots" [value]="slot.slotId">{{slot.time}}</option>
+    
+            </select>
+         </div>
+    
+         <button (click)="onSubmit()">Upload</button>
+      </div>
+   </div>

@@ -1,0 +1,13 @@
+<p>mybookings works!</p>
+<div *ngFor="let booking of bookings">
+    <div>
+      <strong>Turf Name:</strong> {{ booking.turfName }}
+    </div>
+    <div>
+      <strong>Booked Slot:</strong> {{ booking.slotId }} <!-- Replace with the actual slot time -->
+    </div>
+    <div>
+      <strong>Booking Date:</strong> {{ booking.date | date }}
+    </div>
+    <hr>
+  </div>

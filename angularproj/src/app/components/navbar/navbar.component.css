@@ -1,0 +1,77 @@
+/* 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+  } */
+  /* Navbar styles */
+/* Navbar styles */
+/* Navbar styles */
+.navbar {
+  background-color: #1d3557;
+  padding: 1rem;
+}
+
+.navbar-brand {
+  color: #f1faee;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #f1faee;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover {
+  color: #e63946;
+}
+
+.nav-link.active {
+  color: #457b9d;
+}
+
+/* Responsive styles */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Turf booking system specific styles */
+.navbar-brand::before {
+  content: "\26BD";
+  margin-right: 0.5rem;
+}

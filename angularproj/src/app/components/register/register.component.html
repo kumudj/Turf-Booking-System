@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Register</h2>
+  <form >
+    <div class="mb-3">
+      <label for="name">Name:</label>
+      <input type="text" [(ngModel)]="userName" [ngModelOptions]="{standalone:true}" name="name" id="name" required>
+    </div>
+ 
+    <div class="mb-3">
+        <label for="email">Email Id:</label>
+        <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone:true}" name="email" id="email" required>
+    </div>
+ 
+    <div class="mb-3">
+        <label for="password">Password:</label>
+        <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone:true}" name="password" id="password" required>
+    </div>
+ 
+    <div class="mb-3">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" [(ngModel)]="phone" [ngModelOptions]="{standalone:true}" id="phone" name="phone" placeholder="+91" pattern="[789][0-9]{9}" required>
+    </div>
+   
+    <button type="submit" (click)="save()" class="btn btn-primary">Submit</button>
+ 
+  </form>

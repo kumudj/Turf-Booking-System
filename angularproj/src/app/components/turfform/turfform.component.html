@@ -1,0 +1,75 @@
+<div class="p-8 mt-4">
+    <div class="shadow p-6">
+      @if(isEdit){
+      <h4>Edit Turf Detail</h4>
+      }@else {
+      <h4>Create Turf</h4>
+      }
+      <form [formGroup]="employeeForm" (ngSubmit)="save()">
+        <div class="w-full flex flex-wrap">
+          <mat-form-field class="w-full">
+            <mat-label>id</mat-label>
+            <input
+              type="text"
+              matInput
+              placeholder="0"
+              formControlName="id"
+            />
+          </mat-form-field>
+        </div>
+        <div class="w-full flex flex-wrap">
+          <mat-form-field class="w-full">
+            <mat-label>Name</mat-label>
+            <input
+              type="text"
+              matInput
+              placeholder="Name"
+              formControlName="name"
+            />
+          </mat-form-field>
+        </div>
+        <div class="w-full flex flex-wrap">
+          <mat-form-field class="w-full">
+            <mat-label>location</mat-label>
+            <input
+              type="text"
+              matInput
+              placeholder="Location"
+              formControlName="location"
+            />
+          </mat-form-field>
+        </div>
+        <div class="w-full flex flex-wrap">
+          <mat-form-field class="w-full">
+            <mat-label>Phone</mat-label>
+            <input
+              type="text"
+              matInput
+              placeholder="Availability"
+              formControlName="availability"
+            />
+          </mat-form-field>
+        </div>
+        <div class="flex justify-center">
+          @if(isEdit){
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!employeeForm.valid"
+          >
+            Update
+          </button>
+          }@else {
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!employeeForm.valid"
+          >
+            Add
+          </button>
+          }
+        </div>
+        <div></div>
+      </form>
+    </div>
+  </div>

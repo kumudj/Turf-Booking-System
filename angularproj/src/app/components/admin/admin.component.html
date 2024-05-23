@@ -1,0 +1,42 @@
+<div class="new-employee-button-container">
+    <button mat-raised-button color="primary" (click)="navigateToAddTurf()">Add New Turf</button>
+   </div>
+   <mat-table [dataSource]="turfList">
+    
+       <!-- ID Column -->
+       <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+          <mat-cell *matCellDef="let turf"> {{turf.id}} </mat-cell>
+       </ng-container>
+      
+       <!-- Name Column -->
+       <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let turf"> {{turf.name}} </mat-cell>
+       </ng-container>
+      
+       <!-- Location Column -->
+       <ng-container matColumnDef="location">
+          <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>
+          <mat-cell *matCellDef="let turf"> {{turf.location}} </mat-cell>
+       </ng-container>
+      
+       <!-- Availability Column -->
+       <ng-container matColumnDef="avaliability">
+          <mat-header-cell *matHeaderCellDef> Availability </mat-header-cell>
+    
+     <mat-cell *matCellDef="let turf"> {{turf.availability}}</mat-cell>
+       </ng-container>
+      
+       <!-- Action Column -->
+       <ng-container matColumnDef="action">
+          <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+          <mat-cell *matCellDef="let turf">
+            <button mat-button color="primary" (click)="edit(turf.id)">Edit</button>
+            <button mat-button color="warn" (click)="delete(turf.id)">Delete</button>
+          </mat-cell>
+       </ng-container>
+      
+       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>

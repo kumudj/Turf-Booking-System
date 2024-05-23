@@ -1,0 +1,12 @@
+ 
+.container{
+    width: 300px;
+    height: auto;
+}
+.but{
+   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+}
